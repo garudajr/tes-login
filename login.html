@@ -8,11 +8,21 @@
     <style>
         /* Latar belakang gradien animasi */
         body {
-            background: linear-gradient(-45deg, #4f46e5, #7c3aed, #ec4899, #f59e0b);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    /* Menambahkan gambar latar belakang */
+    background-image: linear-gradient(rgba(29, 39, 58, 0.6), rgba(29, 39, 58, 0.6)), url('bg-blitar.jpg');
+
+    /* Membuat gambar memenuhi seluruh layar */
+    background-size: cover;
+
+    /* Posisi gambar di tengah */
+    background-position: center;
+
+    /* Membuat gambar tidak ikut scroll (efek paralaks) */
+    background-attachment: fixed;
+
+    /* Tetap menggunakan font yang sama */
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
@@ -296,4 +306,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 </body>
+
 </html>
