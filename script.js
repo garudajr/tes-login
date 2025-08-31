@@ -126,9 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const welcomePage = document.createElement('div');
         welcomePage.className = 'login-card w-full max-w-lg p-8 rounded-3xl shadow-2xl text-center fade-in';
         welcomePage.innerHTML = `
-            <div class="w-24 h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg animate-pulse">
-                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
+           <img src="logo.png" alt="Logo Kelas Onederful" class="w-32 mx-auto mb-6 animate-fade-in-up">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Selamat Datang!</h1>
             <h1 class="text-4xl font-bold text-gray-800 mb-4">🎉 Selamat Datang!</h1>
             <div class="bg-gray-100 p-6 rounded-xl border mb-6">
                 <p class="text-3xl font-bold text-indigo-600">${username}</p>
@@ -171,3 +170,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
