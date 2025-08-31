@@ -85,15 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         verifyButton.disabled = true;
         verifyButton.innerHTML = '⏳ Memverifikasi...';
-        setCharacterSet('happy'); // Keep happy state
+        setCharacterSet('happy');
         characterElement.textContent = '🥳';
         characterStatus.textContent = 'Verifikasi berhasil! 🎉';
 
         await new Promise(resolve => setTimeout(resolve, 1500));
         
         verifyButton.innerHTML = '✅ Terverifikasi!';
-        verifyButton.classList.remove('bg-green-500');
-        verifyButton.classList.add('bg-green-600');
         
         await new Promise(resolve => setTimeout(resolve, 1000));
         
@@ -102,6 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     /** Proses akhir login dan menampilkan halaman sambutan */
     async function proceedToLogin() {
+        // Simpan nama pengguna ke localStorage sebelum melanjutkan
+        localStorage.setItem('loggedInUsername', usernameInput.value.trim());
+
         verificationSection.classList.add('hidden');
         loginButton.style.display = 'block';
 
@@ -126,18 +127,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const welcomePage = document.createElement('div');
         welcomePage.className = 'login-card w-full max-w-lg p-8 rounded-3xl shadow-2xl text-center fade-in';
         welcomePage.innerHTML = `
-           <img src="logo.png" alt="Logo Kelas Onederful" class="w-32 mx-auto mb-6 animate-fade-in-up">
+            <img src="logo.png" alt="Logo Kelas Onederful" class="w-32 mx-auto mb-6"> 
             <h1 class="text-4xl font-bold text-gray-800 mb-4">Selamat Datang!</h1>
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">🎉 Selamat Datang!</h1>
             <div class="bg-gray-100 p-6 rounded-xl border mb-6">
                 <p class="text-3xl font-bold text-indigo-600">${username}</p>
                 <p class="text-lg font-medium text-gray-600">Kelas: ${kelas}</p>
             </div>
             <div class="space-y-3">
                 <button 
-                    onclick="alert('Demo: Menuju halaman dashboard berita kelas!')" 
+                    onclick="goToDashboard()" 
                     class="w-full bg-[#F5F5DC] text-gray-800 py-3 rounded-xl font-semibold hover:bg-[#E0E0C6] transition-all">
-                    📰 Lihat Berita Kelas
+                    📰 Masuk ke Dashboard
                 </button>
                 <button 
                     onclick="location.reload()" 
@@ -147,6 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
         document.body.appendChild(welcomePage);
+    }
+
+    /** Fungsi untuk pindah ke halaman dashboard */
+    window.goToDashboard = function() {
+        window.location.href = 'dashboard.html';
     }
 
     // --- Event Listeners ---
@@ -170,4 +175,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
