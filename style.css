@@ -1,5 +1,5 @@
 body {
-    background-image: url('smaga.jpg'); /* Pastikan nama file ini sesuai */
+    background-image: url('smaga.jpg'); /* NAMA FILE SUDAH DIPERBAIKI */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,4 +135,3 @@ body::before {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
