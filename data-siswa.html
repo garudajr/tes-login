@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa - Kelas X-1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f4f4f5;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <img src="logo.png" alt="Logo Kelas" class="h-10 w-auto">
+                    <span class="font-bold text-xl text-gray-700">Onederful X-1</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="dashboard.html" class="py-2 px-3 text-gray-600 hover:bg-gray-200 rounded-md text-sm font-medium">Dashboard</a>
+                    <a href="data-siswa.html" class="py-2 px-3 bg-indigo-500 text-white rounded-md text-sm font-medium">Data Diri Siswa</a>
+                    <a href="#" class="py-2 px-3 text-gray-600 hover:bg-gray-200 rounded-md text-sm font-medium">Jadwal</a>
+                    <a href="#" class="py-2 px-3 text-gray-600 hover:bg-gray-200 rounded-md text-sm font-medium">Pengumuman</a>
+                    <a href="#" class="py-2 px-3 text-gray-600 hover:bg-gray-200 rounded-md text-sm font-medium">Galeri</a>
+                    <a href="login.html" id="logoutButton" class="py-2 px-3 bg-red-500 text-white rounded-md text-sm font-medium">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto py-8 px-4">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Daftar Siswa Kelas X-1</h1>
+            <p class="text-gray-600">Tahun Ajaran 2025/2026</p>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <table class="min-w-full leading-normal">
+                <thead class="bg-indigo-500 text-white">
+                    <tr>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold uppercase tracking-wider">
+                            No
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold uppercase tracking-wider">
+                            Nama Siswa
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-200 text-center text-xs font-semibold uppercase tracking-wider">
+                            L/P
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">1</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">AGTYA KIRANA CINTA LARASATI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">2</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ALFIAN NOVA'AL FULADI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">3</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ALFARID AKSI PUTRA EFFENDI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">4</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">KURNIA RUBY NINGTYAS</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">5</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ANDYA ARAYA DEWANTARI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">6</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ANISA DEWI SRI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">7</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">AQILA TABINA KINANDARI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">8</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">AFIZ SHOFIYAN HIZWA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">9</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ARYA SAFA MU'RIA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">10</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ERLA ANGGUN SAPUTRI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">11</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">EVITA PUTRI MULIA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">12</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">EVAN DAVID A</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">13</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">FARUQ HANIF SUBEKI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">14</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">FARZANA AYU SETYA SALSABILA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">15</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">FAKHRI ALBARIN NAJA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">16</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">GIZELLA ANDHITA SALVA WULANS</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">17</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">FEBYKA MAULIANA WIBI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">18</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">INTAN AULIA SARI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">19</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">KAYLA HAPPY PRAMITA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">20</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">MAISYA NUR SAHILA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">21</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">KINASIH SELADIATI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">22</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">MAYA PUTRI RAMADHANI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">23</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">MOCHAMAD NIKHLIL MUSTOFA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">24</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">MUHAMMAD NIKKO SAPUTRA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">25</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">NOVELIA CAHYA PUTRI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">26</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">NAURA NAFALUNA FIRDAUS</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">27</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">QONITA NALINI NAIS SHAFIQAH</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">28</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">REYZA FAJAR NUGRAHA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">29</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">SALMA HAMIDAH</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">30</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">WAFIA NUR HAFIZAH</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">31</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">WAFI ADWA PRASETYO</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">L</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">32</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ZAHRA RAISA AMMARA PUTRI RU</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">33</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ZALFA SABILA NAFISA</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                     <tr class="hover:bg-gray-100 bg-gray-50">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">34</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">ZHAZHA ALVIRA MERLINKI</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">P</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // Fungsi untuk menghapus data saat logout
+        document.getElementById('logoutButton').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('loggedInUsername');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
