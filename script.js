@@ -135,8 +135,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="text-lg font-medium text-gray-600">Kelas: ${kelas}</p>
             </div>
             <div class="space-y-3">
-                <button onclick="alert('Demo: Menuju halaman dashboard berita kelas!')" class="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition-all">📰 Lihat Berita Kelas</button>
-                <button onclick="location.reload()" class="w-full bg-gray-500 text-white py-3 rounded-xl font-medium hover:bg-gray-600 transition-all">🔄 Kembali ke Login</button>
+                <button 
+                    onclick="alert('Demo: Menuju halaman dashboard berita kelas!')" 
+                    class="w-full bg-[#F5F5DC] text-gray-800 py-3 rounded-xl font-semibold hover:bg-[#E0E0C6] transition-all">
+                    📰 Lihat Berita Kelas
+                </button>
+                <button 
+                    onclick="location.reload()" 
+                    class="w-full bg-gray-300 text-gray-800 py-3 rounded-xl font-medium hover:bg-gray-400 transition-all">
+                    🔄 Kembali ke Login
+                </button>
             </div>
         `;
         document.body.appendChild(welcomePage);
