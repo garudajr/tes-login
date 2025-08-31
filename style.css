@@ -1,5 +1,5 @@
 body {
-    background-image: url('smaga.jpg'); /* NAMA FILE SUDAH DIPERBAIKI */
+    background-image: url('smaga.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Hitam dengan transparansi 40% */
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -76,56 +76,63 @@ body::before {
     transform: translateY(-50%) scale(1.1);
 }
 
+/* --- PERUBAHAN UNTUK TOMBOL "MASUK" --- */
 .login-btn {
     width: 100%;
-    color: white;
+    color: #374151; /* Ubah warna teks menjadi gelap agar kontras dengan cream */
     padding: 1rem 1.5rem;
     border-radius: 0.75rem;
     font-weight: 600;
     font-size: 1.125rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: #F5F5DC; /* Warna cream */
     transition: all 0.3s ease;
 }
 
 .login-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 10px 25px rgba(245, 245, 220, 0.6); /* Efek shadow juga ikut cream */
+    background: #E0E0C6; /* Cream sedikit lebih gelap saat hover */
 }
 
 .login-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+    background: #E0E0C6; /* Warna disabled */
 }
 
-/* Tombol di bagian verifikasi */
+/* --- PERUBAHAN UNTUK TOMBOL VERIFIKASI KARAKTER --- */
+/* Tombol "Lanjutkan" */
 .btn-primary {
     padding: 0.5rem 1rem;
-    background-color: #22c55e;
-    color: white;
+    background-color: #F5F5DC; /* Warna cream */
+    color: #374151; /* Teks gelap */
     border-radius: 0.5rem;
     transition: background-color 0.2s;
     font-size: 0.875rem;
 }
 .btn-primary:hover {
-    background-color: #16a34a;
+    background-color: #E0E0C6; /* Cream sedikit lebih gelap saat hover */
 }
 .btn-primary:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    background-color: #E0E0C6; /* Warna disabled */
 }
 
+/* Tombol "Hapus" */
 .btn-secondary {
     padding: 0.5rem 1rem;
-    background-color: #6b7280;
-    color: white;
+    background-color: #D3D3D3; /* Gray terang untuk sekunder */
+    color: #374151; /* Teks gelap */
     border-radius: 0.5rem;
     transition: background-color 0.2s;
     font-size: 0.875rem;
 }
 .btn-secondary:hover {
-    background-color: #4b5563;
+    background-color: #C0C0C0; /* Gray sedikit lebih gelap saat hover */
 }
+
 
 /* Animasi untuk kemunculan elemen */
 .fade-in {
