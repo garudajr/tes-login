@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kelas X-1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f4f4f5; /* Warna latar belakang abu-abu muda */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <img src="logo.png" alt="Logo Kelas" class="h-10 w-auto">
+                    <span class="font-bold text-xl text-gray-700">Onederful X-1</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="py-2 px-3 bg-indigo-500 text-white rounded-md text-sm font-medium">Dashboard</a>
+                    <a href="#" class="py-2 px-3 text-gray-600 hover:bg-gray-200 rounded-md text-sm font-medium">Jadwal</a>
+                    <a href="#" class="py-2 px-3 text-gray-600 hover:bg-gray-200 rounded-md text-sm font-medium">Pengumuman</a>
+                    <a href="#" class="py-2 px-3 text-gray-600 hover:bg-gray-200 rounded-md text-sm font-medium">Galeri</a>
+                    <a href="login.html" id="logoutButton" class="py-2 px-3 bg-red-500 text-white rounded-md text-sm font-medium">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-6 px-4">
+        <h1 id="welcome-message" class="text-3xl font-bold text-gray-800 mb-6"></h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-2">📌 Pengumuman Terbaru</h2>
+                <p class="text-gray-600">Belum ada pengumuman baru saat ini.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-2">🗓️ Jadwal Hari Ini</h2>
+                <p class="text-gray-600">Tidak ada jadwal khusus hari ini.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Mengambil nama pengguna yang login dari localStorage
+        const username = localStorage.getItem('loggedInUsername');
+
+        if (username) {
+            // Menampilkan pesan selamat datang yang personal
+            document.getElementById('welcome-message').textContent = `Selamat Datang, ${username}!`;
+        } else {
+            // Jika tidak ada data login, kembalikan ke halaman login
+            window.location.href = 'login.html';
+        }
+
+        // Fungsi untuk menghapus data saat logout
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUsername');
+        });
+    </script>
+
+</body>
+</html>
