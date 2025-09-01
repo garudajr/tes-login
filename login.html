@@ -6,42 +6,90 @@
     <title>Selamat Datang - Demo Interaktif</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Gaya CSS Anda yang sudah ada, tidak perlu diubah */
+        /* Latar belakang dengan gambar sekolah */
         body {
-            background-image: linear-gradient(rgba(29, 39, 58, 0.6), rgba(29, 39, 58, 0.6)), url('smaganesian.jpg');
+            /* GANTI 'smaga.jpg' DENGAN NAMA FILE GAMBAR LATAR ANDA */
+            background-image: linear-gradient(rgba(29, 39, 58, 0.6), rgba(29, 39, 58, 0.6)), url('smaga.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        /* Kartu login dengan efek glassmorphism */
         .login-card {
             backdrop-filter: blur(20px);
             background: rgba(255, 255, 255, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
+
+        /* Styling untuk input field */
         .input-field:focus {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+            box-shadow: 0 10px 25px rgba(123, 64, 25, 0.2); /* Shadow disesuaikan dengan palet baru */
         }
+
+        /* ================================================ */
+        /* ===== GAYA BARU SESUAI COLOR PALETTE       ===== */
+        /* ================================================ */
+
+        /* Tombol Utama (Warna Oranye Cerah) */
         .login-btn {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            width: 100%;
+            color: white;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: #FF7D29; /* [WARNA BARU] Oranye cerah dari palet */
+            box-shadow: 0 4px 10px rgba(255, 125, 41, 0.3);
             transition: all 0.3s ease;
         }
+
         .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+            background-color: #7B4019; /* [WARNA BARU] Cokelat tua untuk hover */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(123, 64, 25, 0.4);
         }
+
+        /* Tombol Sekunder (Warna Kuning-Oranye Muda) */
         .secondary-btn {
-            background: #6b7280; /* Gray-500 */
+            background-color: #FFBF78; /* [WARNA BARU] Kuning-oranye muda dari palet */
+            color: #7B4019; /* [WARNA BARU] Teks cokelat tua agar kontras */
+            box-shadow: 0 4px 10px rgba(255, 191, 120, 0.3);
         }
+
         .secondary-btn:hover {
-            background: #4b5563; /* Gray-600 */
+            background-color: #FF7D29; /* [WARNA BARU] Oranye cerah untuk hover */
+            color: white; /* Teks jadi putih saat hover */
         }
-        .password-toggle:hover {
-            color: #4f46e5;
-            transform: scale(1.1);
+
+        /* Tombol "Kembali" (berbentuk link teks) */
+        .kembali-btn {
+            width: 100%;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: #7B4019; /* [WARNA BARU] Link kembali disesuaikan */
+            font-weight: 600;
+            text-align: center;
+            display: block;
+            border-radius: 0.75rem;
+            transition: background-color 0.2s ease;
         }
+        .kembali-btn:hover {
+            background-color: rgba(123, 64, 25, 0.1); /* Efek highlight saat hover */
+        }
+
+        /* Judul (Selamat Datang, dll.) */
+        h1, h2 {
+            color: #7B4019; /* [WARNA BARU] Judul utama menggunakan warna cokelat tua */
+        }
+
+        /* Animasi bentuk-bentuk di latar belakang (tidak berubah) */
         .floating-shapes .shape {
             position: absolute;
             background: rgba(255, 255, 255, 0.1);
@@ -51,6 +99,7 @@
         .shape:nth-child(1) { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
         .shape:nth-child(2) { width: 120px; height: 120px; top: 60%; right: 10%; animation-delay: 3s; }
         .shape:nth-child(3) { width: 60px; height: 60px; bottom: 20%; left: 20%; animation-delay: 5s; }
+
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-25px) rotate(180deg); }
@@ -64,41 +113,41 @@
 
     <main id="pilihanCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl">
         <div class="flex justify-center mb-4">
-            <img src="logo.png" alt="Logo Aplikasi" class="h-20 w-auto"> </div>
-        
+             <img src="logo.png" alt="Logo Aplikasi" class="h-20 w-auto"> 
+        </div>
         <div class="text-center mb-8">
             <h1 class="text-3xl font-bold text-gray-800 mb-2">Selamat Datang!</h1>
             <p class="text-gray-600">Pilih aksi untuk melanjutkan</p>
         </div>
         <div class="space-y-4">
-            <button data-target="daftarSiswaCard" class="nav-btn login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">🎓 Daftar sebagai Siswa</button>
-            <button data-target="daftarGuruCard" class="nav-btn login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">🧑‍🏫 Daftar sebagai Guru</button>
-            <button data-target="loginCard" class="nav-btn login-btn secondary-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">🔑 Masuk Kembali</button>
+            <button data-target="daftarSiswaCard" class="nav-btn login-btn">🎓 Daftar sebagai Siswa</button>
+            <button data-target="daftarGuruCard" class="nav-btn login-btn">🧑‍🏫 Daftar sebagai Guru</button>
+            <button data-target="loginCard" class="nav-btn login-btn secondary-btn">🔑 Masuk Kembali</button>
         </div>
     </main>
 
     <main id="loginCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl hidden">
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Masuk Akun</h1>
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Masuk Akun</h2>
             <p class="text-gray-600">Gunakan username dan password Anda</p>
         </div>
         <form id="loginForm" class="space-y-6">
             <div>
                 <label for="username" class="block text-sm font-semibold text-gray-700 mb-2">Username</label>
-                <input type="text" id="username" placeholder="Masukkan username" class="input-field w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+                <input type="text" id="username" placeholder="Masukkan username" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
             </div>
             <div>
                 <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
-                <input type="password" id="password" placeholder="Masukkan password" class="input-field w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+                <input type="password" id="password" placeholder="Masukkan password" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
             </div>
-            <button type="submit" class="login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">Masuk</button>
-            <button type="button" data-target="pilihanCard" class="nav-btn w-full py-2 text-indigo-600 font-semibold">Kembali ke Pilihan Awal</button>
+            <button type="submit" class="login-btn">Masuk</button>
+            <button type="button" data-target="pilihanCard" class="nav-btn kembali-btn">Kembali ke Pilihan Awal</button>
         </form>
     </main>
     
     <main id="daftarSiswaCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl hidden">
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Daftar Siswa</h1>
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Daftar Siswa</h2>
             <p class="text-gray-600">Isi data diri Anda di bawah ini</p>
         </div>
         <form class="space-y-4">
@@ -122,14 +171,14 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-2">Kelas</label>
                 <input type="text" placeholder="Contoh: 11-A, 12-B" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
             </div>
-            <button type="submit" class="login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">Daftar Sekarang</button>
-            <button type="button" data-target="pilihanCard" class="nav-btn w-full py-2 text-indigo-600 font-semibold">Kembali ke Pilihan Awal</button>
+            <button type="submit" class="login-btn">Daftar Sekarang</button>
+            <button type="button" data-target="pilihanCard" class="nav-btn kembali-btn">Kembali ke Pilihan Awal</button>
         </form>
     </main>
 
     <main id="daftarGuruCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl hidden">
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Daftar Guru</h1>
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Daftar Guru</h2>
             <p class="text-gray-600">Isi data diri Anda di bawah ini</p>
         </div>
         <form class="space-y-4">
@@ -142,7 +191,7 @@
                 <input type="text" placeholder="Untuk komunikasi" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
             </div>
             <div>
-                <label class="block text-sm font-semibold text-gray-700 mb-2">Username</o>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Username</label>
                 <input type="text" placeholder="Buat username unik" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
             </div>
             <div>
@@ -153,8 +202,8 @@
                 <label class="block text-sm font-semibold text-gray-700 mb-2">Mata Pelajaran</label>
                 <input type="text" placeholder="Contoh: Matematika, Bahasa Indonesia" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
             </div>
-            <button type="submit" class="login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">Daftar Sekarang</button>
-            <button type="button" data-target="pilihanCard" class="nav-btn w-full py-2 text-indigo-600 font-semibold">Kembali ke Pilihan Awal</button>
+            <button type="submit" class="login-btn">Daftar Sekarang</button>
+            <button type="button" data-target="pilihanCard" class="nav-btn kembali-btn">Kembali ke Pilihan Awal</button>
         </form>
     </main>
 
@@ -164,27 +213,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelectorAll('.nav-btn');
     let currentCard = document.getElementById('pilihanCard');
 
-    // Fungsi untuk menampilkan kartu yang dituju
     function showCard(cardId) {
         const targetCard = document.getElementById(cardId);
         if (!targetCard) return;
 
-        // Sembunyikan kartu yang sedang aktif
         if (currentCard) {
             currentCard.classList.add('opacity-0', 'scale-95');
             setTimeout(() => {
                 currentCard.classList.add('hidden');
-            }, 300); // Tunggu animasi selesai
+            }, 300);
         }
         
-        // Tampilkan kartu baru
         setTimeout(() => {
             targetCard.classList.remove('hidden', 'opacity-0', 'scale-95');
             currentCard = targetCard;
         }, 300);
     }
 
-    // Tambahkan event listener untuk semua tombol navigasi
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const targetId = button.dataset.target;
@@ -192,19 +237,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Tambahkan style untuk transisi saat kartu muncul
     allCards.forEach(card => {
         if(card.id !== 'pilihanCard') {
             card.classList.add('opacity-0', 'scale-95');
         }
     });
-
-    // (Opsional) Anda bisa menambahkan kembali script verifikasi karakter di sini
-    // jika ingin menggunakannya pada form login.
 });
 </script>
 </body>
 </html>
-
-
-
