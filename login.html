@@ -8,8 +8,8 @@
     <style>
         /* Latar belakang dengan gambar sekolah */
         body {
-            /* GANTI 'smaga.jpg' DENGAN NAMA FILE GAMBAR LATAR ANDA */
-            background-image: linear-gradient(rgba(29, 39, 58, 0.6), rgba(29, 39, 58, 0.6)), url('smaga.jpg');
+            /* PERUBAHAN 1: Nama file gambar latar diperbarui */
+            background-image: linear-gradient(rgba(29, 39, 58, 0.6), rgba(29, 39, 58, 0.6)), url('smaganesian.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -27,14 +27,10 @@
         /* Styling untuk input field */
         .input-field:focus {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(123, 64, 25, 0.2); /* Shadow disesuaikan dengan palet baru */
+            box-shadow: 0 10px 25px rgba(123, 64, 25, 0.2);
         }
 
-        /* ================================================ */
-        /* ===== GAYA BARU SESUAI COLOR PALETTE       ===== */
-        /* ================================================ */
-
-        /* Tombol Utama (Warna Oranye Cerah) */
+        /* Gaya baru sesuai color palette */
         .login-btn {
             width: 100%;
             color: white;
@@ -45,35 +41,33 @@
             font-size: 1.125rem;
             cursor: pointer;
             text-decoration: none;
-            background-color: #FF7D29; /* [WARNA BARU] Oranye cerah dari palet */
+            background-color: #FF7D29;
             box-shadow: 0 4px 10px rgba(255, 125, 41, 0.3);
             transition: all 0.3s ease;
         }
 
         .login-btn:hover {
-            background-color: #7B4019; /* [WARNA BARU] Cokelat tua untuk hover */
+            background-color: #7B4019;
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(123, 64, 25, 0.4);
         }
 
-        /* Tombol Sekunder (Warna Kuning-Oranye Muda) */
         .secondary-btn {
-            background-color: #FFBF78; /* [WARNA BARU] Kuning-oranye muda dari palet */
-            color: #7B4019; /* [WARNA BARU] Teks cokelat tua agar kontras */
+            background-color: #FFBF78;
+            color: #7B4019;
             box-shadow: 0 4px 10px rgba(255, 191, 120, 0.3);
         }
 
         .secondary-btn:hover {
-            background-color: #FF7D29; /* [WARNA BARU] Oranye cerah untuk hover */
-            color: white; /* Teks jadi putih saat hover */
+            background-color: #FF7D29;
+            color: white;
         }
 
-        /* Tombol "Kembali" (berbentuk link teks) */
         .kembali-btn {
             width: 100%;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
-            color: #7B4019; /* [WARNA BARU] Link kembali disesuaikan */
+            color: #7B4019;
             font-weight: 600;
             text-align: center;
             display: block;
@@ -81,15 +75,14 @@
             transition: background-color 0.2s ease;
         }
         .kembali-btn:hover {
-            background-color: rgba(123, 64, 25, 0.1); /* Efek highlight saat hover */
+            background-color: rgba(123, 64, 25, 0.1);
         }
 
-        /* Judul (Selamat Datang, dll.) */
         h1, h2 {
-            color: #7B4019; /* [WARNA BARU] Judul utama menggunakan warna cokelat tua */
+            color: #7B4019;
         }
 
-        /* Animasi bentuk-bentuk di latar belakang (tidak berubah) */
+        /* Animasi bentuk-bentuk di latar belakang */
         .floating-shapes .shape {
             position: absolute;
             background: rgba(255, 255, 255, 0.1);
@@ -113,7 +106,7 @@
 
     <main id="pilihanCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl">
         <div class="flex justify-center mb-4">
-             <img src="logo.png" alt="Logo Aplikasi" class="h-20 w-auto"> 
+            <img src="logo.png" alt="Logo Aplikasi" class="h-20 w-auto"> 
         </div>
         <div class="text-center mb-8">
             <h1 class="text-3xl font-bold text-gray-800 mb-2">Selamat Datang!</h1>
@@ -150,7 +143,7 @@
             <h2 class="text-3xl font-bold text-gray-800 mb-2">Daftar Siswa</h2>
             <p class="text-gray-600">Isi data diri Anda di bawah ini</p>
         </div>
-        <form class="space-y-4">
+        <form action="dashboard.html" class="space-y-4">
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap</label>
                 <input type="text" placeholder="Nama sesuai absen" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
@@ -181,7 +174,7 @@
             <h2 class="text-3xl font-bold text-gray-800 mb-2">Daftar Guru</h2>
             <p class="text-gray-600">Isi data diri Anda di bawah ini</p>
         </div>
-        <form class="space-y-4">
+        <form action="dashboard.html" class="space-y-4">
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap & Gelar</label>
                 <input type="text" placeholder="Contoh: Drs. Budi Santoso, M.Pd." class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
