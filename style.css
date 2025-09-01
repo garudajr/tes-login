@@ -1,139 +1,98 @@
-/* Pengaturan Dasar & Font */
+/* Latar belakang dengan gambar sekolah */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    margin: 0;
-
-    /* --- TAMBAHKAN KODE INI --- */
-    background-image: url('smaga.jpg'); /* <-- GANTI DENGAN NAMA FILE GAMBAR ANDA */
-    background-size: cover; /* Agar gambar menutupi seluruh layar */
-    background-position: center; /* Agar gambar terpusat */
-    background-repeat: no-repeat; /* Agar gambar tidak berulang */
-    /* --- BATAS KODE TAMBAHAN --- */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    /* GANTI 'smaga.jpg' DENGAN NAMA FILE GAMBAR LATAR ANDA */
+    background-image: linear-gradient(rgba(29, 39, 58, 0.6), rgba(29, 39, 58, 0.6)), url('smaga.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Kontainer Utama */
-.container {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Kartu login dengan efek glassmorphism */
+.login-card {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Styling untuk input field */
+.input-field:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(123, 64, 25, 0.2); /* Shadow disesuaikan dengan palet baru */
+}
+
+/* ================================================ */
+/* ===== PERUBAHAN UTAMA SESUAI COLOR PALETTE ===== */
+/* ================================================ */
+
+/* Tombol Utama (Daftar Siswa, Daftar Guru, Daftar Sekarang) */
+.login-btn {
     width: 100%;
-    max-width: 450px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
-
-h1, h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: #0056b3;
-}
-
-p {
-    margin-bottom: 2rem;
-    color: #666;
-}
-
-/* Grup Input Form */
-.input-grup {
-    margin-bottom: 1.2rem;
-    text-align: left;
-}
-
-.input-grup label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #555;
-}
-
-.input-grup input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
-    transition: border-color 0.2s;
-}
-
-.input-grup input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
-}
-
-/* Tombol */
-.tombol {
-    display: block;
-    width: 100%;
-    padding: 0.9rem;
-    margin-bottom: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
     color: white;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.125rem;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.2s, transform 0.1s;
+    background-color: #FF7D29; /* [WARNA BARU] Oranye cerah dari palet */
+    box-shadow: 0 4px 10px rgba(255, 125, 41, 0.3);
+    transition: all 0.3s ease;
 }
 
-.tombol:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.login-btn:hover {
+    background-color: #7B4019; /* [WARNA BARU] Cokelat tua untuk hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(123, 64, 25, 0.4);
 }
 
-.pilihan-grup .tombol {
-    margin-bottom: 1rem;
+/* Tombol Sekunder (Masuk Kembali) */
+.secondary-btn {
+    background-color: #FFBF78; /* [WARNA BARU] Kuning-oranye muda dari palet */
+    color: #7B4019; /* [WARNA BARU] Teks cokelat tua agar kontras */
+    box-shadow: 0 4px 10px rgba(255, 191, 120, 0.3);
 }
 
-.tombol-sekunder {
-    background-color: #6c757d;
+.secondary-btn:hover {
+    background-color: #FF7D29; /* [WARNA BARU] Oranye cerah untuk hover */
+    color: white; /* Teks jadi putih saat hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 125, 41, 0.4);
 }
 
-.tombol-sekunder:hover {
-    background-color: #5a6268;
+/* Tombol Kembali (Link teks) */
+.nav-btn {
+    color: #7B4019; /* [WARNA BARU] Link kembali disesuaikan */
 }
 
-/* Link Kembali */
-.kembali {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 600;
+/* Judul (Selamat Datang, dll.) */
+h1 {
+    color: #7B4019; /* [WARNA BARU] Judul utama menggunakan warna cokelat tua */
 }
 
-.kembali:hover {
-    text-decoration: underline;
+/* ================================================ */
+/* ===== AKHIR DARI PERUBAHAN WARNA             ===== */
+/* ================================================ */
+
+.password-toggle:hover {
+    color: #FF7D29; /* Warna hover ikon mata disesuaikan */
+    transform: scale(1.1);
 }
 
-/* Logika untuk Menampilkan & Menyembunyikan Halaman */
-
-/* 1. Sembunyikan semua halaman form secara default */
-.page {
-    display: none;
+/* Animasi bentuk-bentuk di latar belakang */
+.floating-shapes .shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
 }
+.shape:nth-child(1) { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
+.shape:nth-child(2) { width: 120px; height: 120px; top: 60%; right: 10%; animation-delay: 3s; }
+.shape:nth-child(3) { width: 60px; height: 60px; bottom: 20%; left: 20%; animation-delay: 5s; }
 
-/* 2. Tampilkan halaman yang sedang ditargetkan oleh URL (misal: #login) */
-.page:target {
-    display: block;
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(180deg); }
 }
-
-/* 3. Sembunyikan halaman pilihan awal jika ada halaman lain yang sedang ditargetkan */
-.page:target ~ #pilihan-awal {
-    display: none;
-}
-
-/* 4. Tampilkan halaman pilihan awal jika tidak ada target di URL */
-#pilihan-awal {
-    display: block;
-}
-
