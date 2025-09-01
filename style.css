@@ -1,144 +1,131 @@
+/* Pengaturan Dasar & Font */
 body {
-    background-image: url('smaga.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
 }
 
-/* Lapisan overlay gelap */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Kontainer Utama */
+.container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    max-width: 450px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Posisikan semua konten di atas overlay */
-.login-card {
-    position: relative;
-    z-index: 2;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.90);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.5s ease-in-out;
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #0056b3;
 }
 
-.input-group {
-    position: relative;
+p {
+    margin-bottom: 2rem;
+    color: #666;
 }
 
-.input-field {
-    width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
-    border: 2px solid #e5e7eb;
-    border-radius: 0.75rem;
-    outline: none;
-    color: #374151;
-    transition: all 0.3s ease;
+/* Grup Input Form */
+.input-grup {
+    margin-bottom: 1.2rem;
+    text-align: left;
 }
 
-.input-field:focus {
-    transform: translateY(-2px);
-    border-color: #6366f1;
-    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
-}
-
-.input-icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.5rem;
-    height: 1.5rem;
-    color: #9ca3af;
-    pointer-events: none;
-}
-
-.password-toggle {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9ca3af;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.password-toggle:hover {
-    color: #4f46e5;
-    transform: translateY(-50%) scale(1.1);
-}
-
-/* --- PERUBAHAN UNTUK TOMBOL "MASUK" --- */
-.login-btn {
-    width: 100%;
-    color: #374151; /* Ubah warna teks menjadi gelap agar kontras dengan cream */
-    padding: 1rem 1.5rem;
-    border-radius: 0.75rem;
+.input-grup label {
+    display: block;
+    margin-bottom: 0.5rem;
     font-weight: 600;
-    font-size: 1.125rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    background: #F5F5DC; /* Warna cream */
-    transition: all 0.3s ease;
+    color: #555;
 }
 
-.login-btn:hover {
+.input-grup input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+    transition: border-color 0.2s;
+}
+
+.input-grup input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Tombol */
+.tombol {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.tombol:hover {
+    background-color: #0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(245, 245, 220, 0.6); /* Efek shadow juga ikut cream */
-    background: #E0E0C6; /* Cream sedikit lebih gelap saat hover */
 }
 
-.login-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    background: #E0E0C6; /* Warna disabled */
+.pilihan-grup .tombol {
+    margin-bottom: 1rem;
 }
 
-/* --- PERUBAHAN UNTUK TOMBOL VERIFIKASI KARAKTER --- */
-/* Tombol "Lanjutkan" */
-.btn-primary {
-    padding: 0.5rem 1rem;
-    background-color: #F5F5DC; /* Warna cream */
-    color: #374151; /* Teks gelap */
-    border-radius: 0.5rem;
-    transition: background-color 0.2s;
-    font-size: 0.875rem;
-}
-.btn-primary:hover {
-    background-color: #E0E0C6; /* Cream sedikit lebih gelap saat hover */
-}
-.btn-primary:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background-color: #E0E0C6; /* Warna disabled */
+.tombol-sekunder {
+    background-color: #6c757d;
 }
 
-/* Tombol "Hapus" */
-.btn-secondary {
-    padding: 0.5rem 1rem;
-    background-color: #D3D3D3; /* Gray terang untuk sekunder */
-    color: #374151; /* Teks gelap */
-    border-radius: 0.5rem;
-    transition: background-color 0.2s;
-    font-size: 0.875rem;
-}
-.btn-secondary:hover {
-    background-color: #C0C0C0; /* Gray sedikit lebih gelap saat hover */
+.tombol-sekunder:hover {
+    background-color: #5a6268;
 }
 
-
-/* Animasi untuk kemunculan elemen */
-.fade-in {
-    animation: fadeIn 0.5s ease-in-out;
+/* Link Kembali */
+.kembali {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
 }
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+
+.kembali:hover {
+    text-decoration: underline;
+}
+
+/* Logika untuk Menampilkan & Menyembunyikan Halaman */
+
+/* 1. Sembunyikan semua halaman form secara default */
+.page {
+    display: none;
+}
+
+/* 2. Tampilkan halaman yang sedang ditargetkan oleh URL (misal: #login) */
+.page:target {
+    display: block;
+}
+
+/* 3. Sembunyikan halaman pilihan awal jika ada halaman lain yang sedang ditargetkan */
+.page:target ~ #pilihan-awal {
+    display: none;
+}
+
+/* 4. Tampilkan halaman pilihan awal jika tidak ada target di URL */
+#pilihan-awal {
+    display: block;
 }
