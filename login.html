@@ -3,106 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login atau Daftar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Selamat Datang - Demo Interaktif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gaya CSS Anda yang sudah ada, tidak perlu diubah */
+        body {
+            background-image: linear-gradient(rgba(29, 39, 58, 0.6), rgba(29, 39, 58, 0.6)), url('bg-blitar.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .login-card {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .input-field:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+        }
+        .login-btn {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            transition: all 0.3s ease;
+        }
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+        }
+        .secondary-btn {
+            background: #6b7280; /* Gray-500 */
+        }
+        .secondary-btn:hover {
+            background: #4b5563; /* Gray-600 */
+        }
+        .password-toggle:hover {
+            color: #4f46e5;
+            transform: scale(1.1);
+        }
+        .floating-shapes .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+        .shape:nth-child(1) { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
+        .shape:nth-child(2) { width: 120px; height: 120px; top: 60%; right: 10%; animation-delay: 3s; }
+        .shape:nth-child(3) { width: 60px; height: 60px; bottom: 20%; left: 20%; animation-delay: 5s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(180deg); }
+        }
+    </style>
 </head>
-<body>
-
-    <div class="container">
-        <div id="pilihan-awal" class="page">
-    <img src="logo.png" alt="Logo Kelas" class="logo"> <h1>Selamat Datang!</h1>
-    ...
-</div>
-
-<div id="daftar-siswa" class="page">
-    <img src="logo-kelas.png" alt="Logo Kelas" class="logo"> <h2>📝 Daftar sebagai Siswa</h2>
-    ...
-</div>
-
-<div id="daftar-guru" class="page">
-    <img src="logo-kelas.png" alt="Logo Kelas" class="logo"> <h2>🎓 Daftar sebagai Guru</h2>
-    ...
-</div>
-
-<div id="login" class="page">
-    <img src="logo.png" alt="Logo Kelas" class="logo"> <h2>👋 Masuk ke Akun Anda</h2>
-    ...
-</div>
-        </div>
-
-        <div id="daftar-siswa" class="page">
-            <h2>📝 Daftar sebagai Siswa</h2>
-            <form action="#">
-                <div class="input-grup">
-                    <label for="nama-siswa">Nama Lengkap</label>
-                    <input type="text" id="nama-siswa" placeholder="Dikenali oleh guru/teman" required>
-                </div>
-                <div class="input-grup">
-                    <label for="kontak-siswa">Email / Nomor HP</label>
-                    <input type="text" id="kontak-siswa" placeholder="Untuk verifikasi & reset password" required>
-                </div>
-                <div class="input-grup">
-                    <label for="username-siswa">Username</label>
-                    <input type="text" id="username-siswa" placeholder="Identitas unik di sistem" required>
-                </div>
-                <div class="input-grup">
-                    <label for="password-siswa">Password</label>
-                    <input type="password" id="password-siswa" placeholder="Jaga kerahasiaan password" required>
-                </div>
-                <div class="input-grup">
-                    <label for="kelas-siswa">Kelas / Tingkat</label>
-                    <input type="text" id="kelas-siswa" placeholder="Contoh: 8A, 9B" required>
-                </div>
-                <button type="submit" class="tombol">Daftar</button>
-                <a href="#" class="kembali">Kembali ke Pilihan Awal</a>
-            </form>
-        </div>
-
-        <div id="daftar-guru" class="page">
-            <h2>🎓 Daftar sebagai Guru</h2>
-            <form action="#">
-                <div class="input-grup">
-                    <label for="nama-guru">Nama Lengkap</label>
-                    <input type="text" id="nama-guru" placeholder="Dikenali oleh siswa & admin" required>
-                </div>
-                <div class="input-grup">
-                    <label for="kontak-guru">Email / Nomor HP</label>
-                    <input type="text" id="kontak-guru" placeholder="Untuk verifikasi & komunikasi" required>
-                </div>
-                <div class="input-grup">
-                    <label for="username-guru">Username</label>
-                    <input type="text" id="username-guru" placeholder="Identitas unik di sistem" required>
-                </div>
-                <div class="input-grup">
-                    <label for="password-guru">Password</label>
-                    <input type="password" id="password-guru" placeholder="Jaga kerahasiaan password" required>
-                </div>
-                <div class="input-grup">
-                    <label for="mapel-guru">Mata Pelajaran yang Diajar</label>
-                    <input type="text" id="mapel-guru" placeholder="Contoh: Matematika, IPA" required>
-                </div>
-                <button type="submit" class="tombol">Daftar</button>
-                <a href="#" class="kembali">Kembali ke Pilihan Awal</a>
-            </form>
-        </div>
-
-        <div id="login" class="page">
-            <h2>👋 Masuk ke Akun Anda</h2>
-            <form action="#">
-                <div class="input-grup">
-                    <label for="login-username">Username</label>
-                    <input type="text" id="login-username" placeholder="Masukkan username Anda" required>
-                </div>
-                <div class="input-grup">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" placeholder="Masukkan password Anda" required>
-                </div>
-                <button type="submit" class="tombol">Masuk</button>
-                <a href="#" class="kembali">Kembali ke Pilihan Awal</a>
-            </form>
-        </div>
+<body class="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+    <div class="floating-shapes absolute w-full h-full -z-10">
+        <div class="shape"></div> <div class="shape"></div> <div class="shape"></div>
     </div>
 
+    <main id="pilihanCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Selamat Datang!</h1>
+            <p class="text-gray-600">Pilih aksi untuk melanjutkan</p>
+        </div>
+        <div class="space-y-4">
+            <button data-target="daftarSiswaCard" class="nav-btn login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">🎓 Daftar sebagai Siswa</button>
+            <button data-target="daftarGuruCard" class="nav-btn login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">🧑‍🏫 Daftar sebagai Guru</button>
+            <button data-target="loginCard" class="nav-btn login-btn secondary-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">🔑 Masuk Kembali</button>
+        </div>
+    </main>
+
+    <main id="loginCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl hidden">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Masuk Akun</h1>
+            <p class="text-gray-600">Gunakan username dan password Anda</p>
+        </div>
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-semibold text-gray-700 mb-2">Username</label>
+                <input type="text" id="username" placeholder="Masukkan username" class="input-field w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" class="input-field w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <button type="submit" class="login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">Masuk</button>
+            <button type="button" data-target="pilihanCard" class="nav-btn w-full py-2 text-indigo-600 font-semibold">Kembali ke Pilihan Awal</button>
+        </form>
+    </main>
+    
+    <main id="daftarSiswaCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl hidden">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Daftar Siswa</h1>
+            <p class="text-gray-600">Isi data diri Anda di bawah ini</p>
+        </div>
+        <form class="space-y-4">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap</label>
+                <input type="text" placeholder="Nama sesuai absen" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Email / No. HP</label>
+                <input type="text" placeholder="Untuk verifikasi akun" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Username</label>
+                <input type="text" placeholder="Buat username unik" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                <input type="password" placeholder="Buat password yang aman" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Kelas</label>
+                <input type="text" placeholder="Contoh: 11-A, 12-B" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <button type="submit" class="login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">Daftar Sekarang</button>
+            <button type="button" data-target="pilihanCard" class="nav-btn w-full py-2 text-indigo-600 font-semibold">Kembali ke Pilihan Awal</button>
+        </form>
+    </main>
+
+    <main id="daftarGuruCard" class="login-card w-full max-w-md p-8 rounded-3xl shadow-2xl hidden">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Daftar Guru</h1>
+            <p class="text-gray-600">Isi data diri Anda di bawah ini</p>
+        </div>
+        <form class="space-y-4">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap & Gelar</label>
+                <input type="text" placeholder="Contoh: Drs. Budi Santoso, M.Pd." class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Email / No. HP</label>
+                <input type="text" placeholder="Untuk komunikasi" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Username</o>
+                <input type="text" placeholder="Buat username unik" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                <input type="password" placeholder="Buat password yang aman" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Mata Pelajaran</label>
+                <input type="text" placeholder="Contoh: Matematika, Bahasa Indonesia" class="input-field w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 transition-all duration-300 outline-none">
+            </div>
+            <button type="submit" class="login-btn w-full text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg">Daftar Sekarang</button>
+            <button type="button" data-target="pilihanCard" class="nav-btn w-full py-2 text-indigo-600 font-semibold">Kembali ke Pilihan Awal</button>
+        </form>
+    </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const allCards = document.querySelectorAll('.login-card');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    let currentCard = document.getElementById('pilihanCard');
+
+    // Fungsi untuk menampilkan kartu yang dituju
+    function showCard(cardId) {
+        const targetCard = document.getElementById(cardId);
+        if (!targetCard) return;
+
+        // Sembunyikan kartu yang sedang aktif
+        if (currentCard) {
+            currentCard.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+                currentCard.classList.add('hidden');
+            }, 300); // Tunggu animasi selesai
+        }
+        
+        // Tampilkan kartu baru
+        setTimeout(() => {
+            targetCard.classList.remove('hidden', 'opacity-0', 'scale-95');
+            currentCard = targetCard;
+        }, 300);
+    }
+
+    // Tambahkan event listener untuk semua tombol navigasi
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.dataset.target;
+            showCard(targetId);
+        });
+    });
+
+    // Tambahkan style untuk transisi saat kartu muncul
+    allCards.forEach(card => {
+        if(card.id !== 'pilihanCard') {
+            card.classList.add('opacity-0', 'scale-95');
+        }
+    });
+
+    // (Opsional) Anda bisa menambahkan kembali script verifikasi karakter di sini
+    // jika ingin menggunakannya pada form login.
+});
+</script>
 </body>
 </html>
-
