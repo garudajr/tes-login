@@ -1,13 +1,20 @@
 /* Pengaturan Dasar & Font */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+
+    /* --- TAMBAHKAN KODE INI --- */
+    background-image: url('smaga.jpg'); /* <-- GANTI DENGAN NAMA FILE GAMBAR ANDA */
+    background-size: cover; /* Agar gambar menutupi seluruh layar */
+    background-position: center; /* Agar gambar terpusat */
+    background-repeat: no-repeat; /* Agar gambar tidak berulang */
+    /* --- BATAS KODE TAMBAHAN --- */
+    
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    color: #333;
 }
 
 /* Kontainer Utama */
@@ -129,3 +136,4 @@ p {
 #pilihan-awal {
     display: block;
 }
+
